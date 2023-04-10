@@ -269,8 +269,5 @@ h2 {
     }
     .ingreso{margin: 10px;}
     .egreso{margin: 10px;}
-    body{
-        overflow-x: hidden;
-        background-color: #dc2430;
-    }
+    
 }
