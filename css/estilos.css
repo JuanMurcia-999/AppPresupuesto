@@ -271,5 +271,6 @@ h2 {
     .egreso{margin: 10px;}
     body{
         overflow-x: hidden;
+        background-color: #dc2430;
     }
 }
