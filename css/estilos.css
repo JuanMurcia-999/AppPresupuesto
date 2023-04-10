@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .limpiarEstilos::after {
@@ -25,15 +26,11 @@ body {
 
 .cabecero {
     height: 40vh;
-    background-size: cover;
     background-position: center;
     position: relative;
-    width: 100%;
     padding-top: 150px;
     padding-bottom: 100px;
     color: #fff;
-    background: url(fondo.png), #7b4397;
-    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
     background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
 }
 
@@ -120,11 +117,12 @@ body {
 .agregar_tipo {
     width: 55px;
     border: 1px solid #e7e7e7;
-    height: 44px;
+    height: 40px;
     font-size: 18px;
     color: inherit;
     background-color: #fff;
-    margin-right: 10px;
+    margin-right:10px;
+    margin-top: 10px;
     font-weight: 300;
     transition: border 0.3s;
 }
@@ -142,7 +140,7 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion { width: 400px;}
+.agregar_descripcion { min-width: 300px;}
 .agregar_valor { width: 100px;}
 
 .agregar_btn {
@@ -169,19 +167,20 @@ body {
 .agregar_btn:focus { outline: none; }
 
 .contenedor {
-    width: 860px;
+    display: flex;
+    justify-content: center;
     margin: 60px auto;
 }
 
 .ingreso {
     float: left;
-    width: 370px;
+    width: 350px;
     margin-right: 70px;
 }
 
 .egreso {
     float: left;
-    width: 370px;
+    width: 350px;
 }
 
 h2 {
@@ -256,3 +255,16 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+
+
+@media screen and (max-width:400px) {
+    .contenedor{
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+    }
+    .ingreso{margin: 10px;}
+    .egreso{margin: 10px;}
+
+
+}
