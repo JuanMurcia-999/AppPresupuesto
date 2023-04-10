@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
+
+
 
 .limpiarEstilos::after {
     content: "";
@@ -18,6 +19,8 @@ body {
     position: relative;
     height: 100vh;
     font-weight: 400;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .derecha { float: right; }
@@ -32,6 +35,7 @@ body {
     padding-bottom: 100px;
     color: #fff;
     background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
+
 }
 
 .presupuesto {
@@ -174,13 +178,13 @@ body {
 
 .ingreso {
     float: left;
-    width: 350px;
+    width: 98%;
     margin-right: 70px;
 }
 
 .egreso {
     float: left;
-    width: 350px;
+    width: 98%;
 }
 
 h2 {
@@ -257,14 +261,20 @@ h2 {
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
 
 
+
 @media screen and (max-width:400px) {
+
     .contenedor{
         flex-direction: column;
         justify-content: center;
         margin: 10px;
+        width: 340px;
+        position: fixed;
     }
     .ingreso{margin: 10px;}
     .egreso{margin: 10px;}
-
-
+    .agregar{padding: 0;}
+    body{
+        overflow: hidden;
+    }
 }
